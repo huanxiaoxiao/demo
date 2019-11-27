@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function back(ele,event){
+				event=event||window.event;
+				if(event.keyCode==13){
+					event.returnValue=false;
+					ele.value+='{{enter}}'
+					return false;
+				}
+			}
+		</script>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<textarea rows="3" cols="40" id='te' onkeypress="back(this.event);">
+		</textarea>
+	</body>
+</html>
